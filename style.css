@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --iconPrimary-color: #1a1c1b;
+  --iconSecond-color: #e1e9e8;
+  --bgCardPrimary-color: #E1E1E6;
+  --bgCardSecond-color: #02799D;
+}
+
+body {
+  background: linear-gradient(45deg, #672eac 0%, #6e6daf 100%);
+
+  font-family: "Montserrat";
+  color: #e1e9e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 19.2rem;
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.play svg path,
+.pause svg path,
+.set svg path,
+.sound-on svg path {
+  fill: var(--iconSecond-color);
+}
+
+.rain svg path {
+  fill: var(--iconPrimary-color);
+}
+
+#timer {
+  font-size: 8.8rem;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+  gap: 4rem;
+}
+
+#cardSound button {
+  background-color: var(--bgCardPrimary-color);
+  width: 138px;
+  height: 152px;
+  border-radius: 24px;
+
+  margin-top: 3.2rem;
+  margin-left: 3.2rem;
+
+}
