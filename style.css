@@ -11,6 +11,8 @@
   --iconSecond-color: #e1e9e8;
   --bgCardPrimary-color: #E1E1E6;
   --bgCardSecond-color: #02799D;
+
+  --transform-scale:scale(1.1);
 }
 
 body {
@@ -22,9 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
 }
-
 
 button {
   background-color: transparent;
@@ -52,7 +52,6 @@ button {
   justify-content: center;
   padding: 1rem;
   margin-left: 2rem;
-
 }
 
 #controls {
@@ -72,7 +71,6 @@ button {
   align-items: center;
   margin-top: 3.2rem;
   margin-left: 2.0rem;
-
 }
 
 @media (min-width: 1024px) {
@@ -82,7 +80,6 @@ button {
     justify-content: center;
     min-height: 100vh;
     gap: 19.2rem;
-
   }
 
   #controls {
@@ -92,4 +89,18 @@ button {
     padding: 1rem;
     gap: 4rem;
   }
+
+  .forest:hover {
+    transform: var(--transform-scale);
+  }
+  .rain:hover {
+    transform: var(--transform-scale);
+  }
+  .cafeteria:hover {
+    transform: var(--transform-scale);
+  }
+  .fireplace:hover {
+    transform: var(--transform-scale);
+  }
+
 }
