@@ -39,6 +39,7 @@ button {
 .play svg path,
 .pause svg path,
 .set svg path,
+.stop svg path,
 .sound-on svg path {
   fill: var(--iconSecond-color);
 }
