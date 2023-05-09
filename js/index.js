@@ -8,8 +8,14 @@ const buttonSoundOn = document.querySelector('.sound-on')
 const buttonSoundOff = document.querySelector('.sound-off')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
+const buttonCardSound = document.querySelector('.forest')
+/*const buttonCardSound = document.querySelector('.rain')
+const buttonCardSound = document.querySelector('.cafeteria')
+const buttonCardSound = document.querySelector('.fireplace')*/
+
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut 
+
 
 function resetControls() {
   buttonPlay.classList.remove('hide')
@@ -97,5 +103,11 @@ buttonSet.addEventListener('click', function () {
   minutes = newMinutes
   updateTimerDisplay(minutes, 0)
 })
+
+buttonCardSound.addEventListener('click', function() {
+  buttonCardSound.classList.add('buttonSelect') 
+})
+
+
 
 
