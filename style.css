@@ -74,6 +74,10 @@ button {
   margin-left: 2.0rem;
 }
 
+.buttonSelect {
+  background-color:#42a194 !important;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;
