@@ -8,10 +8,10 @@ const buttonSoundOn = document.querySelector('.sound-on')
 const buttonSoundOff = document.querySelector('.sound-off')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
-const buttonCardSound = document.querySelector('.forest')
-/*const buttonCardSound = document.querySelector('.rain')
-const buttonCardSound = document.querySelector('.cafeteria')
-const buttonCardSound = document.querySelector('.fireplace')*/
+const buttonForest = document.querySelector('.forest')
+const buttonRain = document.querySelector('.rain')
+const buttonCafeteria = document.querySelector('.cafeteria')
+const buttonFireplace = document.querySelector('.fireplace')
 
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut 
@@ -34,7 +34,6 @@ function resetTimer() {
   clearTimeout(timerTimeOut)
 }
 
-
 function countdown() {
   timerTimeOut = setTimeout(function () {
     let seconds = Number(secondsDisplay.textContent)
@@ -49,7 +48,7 @@ function countdown() {
     }
 
     if (seconds <= 0) {
-      seconds = 2
+      seconds = 60
       --minutes
     }
 
@@ -104,9 +103,31 @@ buttonSet.addEventListener('click', function () {
   updateTimerDisplay(minutes, 0)
 })
 
-buttonCardSound.addEventListener('click', function() {
-  buttonCardSound.classList.add('buttonSelect') 
+buttonForest.addEventListener('click', function() {
+  buttonForest.classList.add('buttonSelect') 
+  buttonRain.classList.remove('buttonSelect') 
+  buttonCafeteria.classList.remove('buttonSelect') 
+  buttonFireplace.classList.remove('buttonSelect') 
 })
+buttonRain.addEventListener('click', function() {
+  buttonRain.classList.add('buttonSelect') 
+  buttonForest.classList.remove('buttonSelect') 
+  buttonCafeteria.classList.remove('buttonSelect') 
+  buttonFireplace.classList.remove('buttonSelect') 
+})
+buttonCafeteria.addEventListener('click', function() {
+  buttonCafeteria.classList.add('buttonSelect') 
+  buttonRain.classList.remove('buttonSelect') 
+  buttonForest.classList.remove('buttonSelect') 
+  buttonFireplace.classList.remove('buttonSelect') 
+})
+buttonFireplace.addEventListener('click', function() {
+  buttonFireplace.classList.add('buttonSelect') 
+  buttonRain.classList.remove('buttonSelect') 
+  buttonCafeteria.classList.remove('buttonSelect') 
+  buttonForest.classList.remove('buttonSelect') 
+})
+
 
 
 
